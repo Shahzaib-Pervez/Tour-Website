@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Website By Shahzaib Pervez</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-    <script src="/code.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <section id="banner">
@@ -25,169 +28,239 @@
     </section>
     <div class="background-slideshow">
         <div class="content">
-            <h1>Tour Agency</h1>
-            <p>Travel Is The Investment On Yourself</p>
+            <h1>BOOK YOUR TOUR </h1>
+            <p>DONOT MISS THAT OPPORTUNITY</p>
         </div>
     </div>
-    <div id="sideNav">
-        <nav>
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">FEATURES</a></li>
-                <li><a href="#">SERVICES</a></li>
-                <li><a href="#">TESTIMONIALS</a></li>
-                <li><a href="#">MEET US</a></li>
-            </ul>
-        </nav>
+  <!-- Menu Button - Positioned at the top right -->
+<div id="menuBtn">☰</div>
+
+<!-- Side Navigation - Now positioned on the right -->
+<div id="sideNav">
+    <span class="closeBtn" onclick="toggleNav()">&times;</span>
+    <nav>
+        <ul>
+            <li><a href="#banner" onclick="toggleNav()">HOME</a></li>
+            <li><a href="#features" onclick="toggleNav()">FEATURES</a></li>
+            <li><a href="#service" onclick="toggleNav()">SERVICES</a></li>
+            <li><a href="#testimonials" onclick="toggleNav()">TESTIMONIALS</a></li>
+            <li><a href="#footer" onclick="toggleNav()">CONTACT</a></li>
+        </ul>
+    </nav>
+</div>
+<script src="script.js"></script>
+<script>
+  function toggleNav() {
+    const sideNav = document.getElementById("sideNav");
+    
+    // Toggle the side navigation
+    if (sideNav.style.right === "0px" || sideNav.style.right === "") {
+        sideNav.style.right = "-250px";
+    } else {
+        sideNav.style.right = "0px";
+    }
+}
+</script>
+
+<section id="features">
+    <div class="title-text">
+        <p>FEATURES</p>
+        <h1>Why Choose Us</h1>
     </div>
+
+    <div class="features-layer">
+        <!-- Feature 1 -->
+        <div class="feature-item">
+            <div class="feature-img">
+                <img src="winter-night-in-gulmarg.jpg" alt="Beautiful Locations">
+            </div>
+            <div class="feature-text">
+                <h2>Beautiful Locations</h2>
+                <p>Explore breathtaking landscapes, from serene valleys to majestic mountain peaks, where nature reveals its most captivating beauty. Discover hidden gems and iconic destinations that offer awe-inspiring views and unforgettable moments. Immerse yourself in crystal-clear lakes, lush green meadows, and vibrant cultural hotspots, perfect for every travel enthusiast. Our carefully curated tours take you to picturesque locations that promise peace, adventure, and lasting memories. Witness the magic of nature’s palette with stunning sunrises, colorful flora, and tranquil waterscapes at every destination.</p>
+            </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-item">
+            <div class="feature-img">
+                <img src="images.jpg" alt="Comfortable Places">
+            </div>
+            <div class="feature-text">
+                <h2>Comfortable Places to Stay</h2>
+                <p>Relax in the most comfortable accommodations that blend luxury with local charm.Experience the ultimate comfort at our handpicked accommodations, designed to make your stay relaxing and memorable. From cozy cottages in serene landscapes to luxurious resorts with world-class amenities, we offer a wide range of options to suit every traveler. Enjoy warm hospitality, modern facilities, and breathtaking views that make your lodging a part of the adventure. Each place is thoughtfully selected to provide convenience, tranquility, and a homely atmosphere. Whether you're seeking a romantic getaway or a family retreat, our accommodations promise to be your perfect haven.</p>
+            </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-item">
+            <div class="feature-img">
+                <img src="tour-10-550x590.jpg" alt="Friendly Environment">
+            </div>
+            <div class="feature-text">
+                <h2>Friendly Environment</h2>
+                <p>Travel with a professional and hospitable team dedicated to making your trip memorable.Immerse yourself in a welcoming atmosphere where warmth and hospitality define every moment of your journey. Our team ensures a friendly environment that makes you feel at home, no matter where you travel. From the smiles of the locals to the camaraderie of fellow travelers, every interaction is filled with positivity and kindness. Enjoy personalized attention and care, creating connections that go beyond just a trip. With us, you’ll experience not only beautiful destinations but also the joy of exploring them in a supportive and inclusive setting.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     
-    <!-- Features Section -->
-    <section id="features">
-        <div class="title-text">
-            <p>FEATURES</p>
-            <h1>Why Choose Us</h1>
-        </div>
-        <div class="features-box">
-            <div class="features">
-                <h1>Beautiful Locations</h1>
-                <div class="features-desc">
-                    <div class="features-icon">
-                        <i class="fa fa-shield"></i>
-                    </div>
-                    <div class="features-text">
-                        <p>We will visit breathtaking views of Pakistan with beautiful staff.</p>
-                    </div>
-                </div>
-                <h1>Beautiful Places To Stay</h1>
-                <div class="features-desc">
-                    <div class="features-icon">
-                        <i class="fa fa-shield"></i>
-                    </div>
-                    <div class="features-text">
-                        <p>We will visit breathtaking views of Pakistan with beautiful staff.</p>
-                    </div>
-                </div>
-                <h1>Friendly Environment</h1>
-                <div class="features-desc">
-                    <div class="features-icon">
-                        <i class="fa fa-shield"></i>
-                    </div>
-                    <div class="features-text">
-                        <p>We will visit breathtaking views of Pakistan with beautiful staff.</p>
+ <!-- Services Section -->
+<section id="service">
+    <div class="title-text">
+        <p>SERVICES</p>
+        <h1>We Provide Better</h1>
+    </div>
+    <div class="service-box">
+        <!-- Service Item 1 -->
+        <div class="single-service">
+            <div class="image-wrapper">
+                <img src="Gulmarg-1.jpg" alt="Hunza Valley">
+                <div class="overlay">
+                    <div class="price">PKR 18000</div>
+                    <div class="text">
+                        <h3>HUNZA VALLEY</h3>
+                        <p>The Hunza Valley (Burushaski: ہُنزݳ دِش‎, romanized: Hunza Dish; Wakhi/Urdu: وادی ہنزہ) is a mountainous valley located in the northern region of the Gilgit-Baltistan, Pakistan.The valley stretches along the Hunza River and shares borders with Ishkoman to the northwest, Shigar to the southeast, Afghanistan's Wakhan Corridor to the north, and China's Xinjiang region to the northeast.[3] The valley floor sits at an elevation of 2,438 meters (7,999 feet).</p>
+                        <button class="book-now">Book Now</button>
                     </div>
                 </div>
             </div>
-            <div class="features-img">
-                <img src="Arang_Kel.jpg" alt="Arang Kel">
-            </div>
         </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="service">
-        <div class="title-text">
-            <p>SERVICES</p>
-            <h1>We Provide Better</h1>
-        </div>
-        <div class="service-box">
-            <!-- Service Item 1 -->
-            <div class="single-service">
-                <img src="Gulmarg-1.jpg" alt="Gulmarg">
-                <div class="overlay"></div>
-                <div class="service-desc">
-                    <h3>HUNZA VALLEY</h3>
-                    <hr>
-                    <p>The Hunza Valley (Burushaski: ہُنزݳ دِش‎, romanized: Hunza Dish; Wakhi/Urdu: وادی ہنزہ) is a mountainous valley located in the northern region of the Gilgit-Baltistan, Pakistan. The valley stretches along the Hunza River and shares borders Ishkoman to the northwest, Shigar to the southeast, Afghanistan's Wakhan Corridor to the north, and China's Xinjiang region to the northeast.[3] The valley floor sits at an elevation of 2,438 meters (7,999 feet). Geographically, the Hunza Valley is divided into three parts: Upper Hunza (Gojal), Central Hunza, and Lower Hunza (Shinaki).</p>
-                </div>
-            </div>
-            <!-- Service Item 2 -->
-            <div class="single-service">
+        <!-- Service Item 2 -->
+        <div class="single-service">
+            <div class="image-wrapper">
                 <img src="Ganga Choti.jpg" alt="Ganga Choti">
-                <div class="overlay"></div>
-                <div class="service-desc">
-                    <h3>GANGA CHOTTI</h3>
-                    <hr>
-                    <p>Ganga Choti (Urdu: گنگا چوٹی) is a peak located in Bagh District of Azad Kashmir, Pakistan.[2] Located at a height of 3,045 metres (9,990 ft), it is a part of the Pir Panjal Range of the Lower Himalayas.[3] Geographically, it is located between the union council Birpani and Sudhan Gali village.</p>
-                            </div>
-            </div>
-            <!-- Service Item 3 -->
-            <div class="single-service">
-                <img src="ratti-gali-lake-azad.jpg" alt="Ratti Gali Lake">
-                <div class="overlay"></div>
-                <div class="service-desc">
-                    <h3>RATTI GALI LAKE</h3>
-                    <hr>
-                    <p>Ratti Gali Lake is an alpine glacial lake which is located in Neelum Valley, Azad Kashmir, Pakistan . The lake is located at an altitude of 3,683 metres (12,083 ft). The lake is fed by the surrounding glacier waters of the mountains.[2][better source needed.Ratti Gali Lake is situated in the Neelum Valley, which is part of the greater Himalayan mountain range. The lake is fed by the glacial melt from the surrounding peaks, ensuring its crystal-clear blue waters remain cold throughout the year. </p>
-                </div>
-            </div>
-            <!-- Service Item 4 -->
-            <div class="single-service">
-                <img src="minimarg.jpg" alt="Minimarg">
-                <div class="overlay"></div>
-                <div class="service-desc">
-                    <h3>MINIMARG</h3>
-                    <hr>
-                    <p>Minimarg (Kashmiri: منٕ مرگ) is a village in the Astore District of Gilgit Baltistan, Pakistan. It is situated on the bank of the Burzil Nala, approximately 36 kilometres (22 mi) south of the Chilam Chowki checkpost and to the north of a border village named Kamri.[2] The village, located south of Astore via the Burzil Pass, has an average elevation of 2,844 metres (9,331 ft) above sea level.</p>
+                <div class="overlay">
+                    <div class="price">PKR 10000</div>
+                    <div class="text">
+                        <h3>GANGA CHOTTI</h3>
+                        <p>Ganga Choti (Urdu: گنگا چوٹی) is a peak located in Bagh District of Azad Kashmir, Pakistan.[2] Located at a height of 3,045 metres (9,990 ft), it is a part of the Pir Panjal Range of the Lower Himalayas.[3] Geographically, it is located between the union council Birpani and Sudhan Gali village.</p>
+                        <button class="book-now">Book Now</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+        <!-- Service Item 3 -->
+        <div class="single-service">
+            <div class="image-wrapper">
+                <img src="ratti-gali-lake-azad.jpg" alt="Ratti Gali Lake">
+                <div class="overlay">
+                    <div class="price">PKR 15000</div>
+                    <div class="text">
+                        <h3>RATTI GALI LAKE</h3>
+                        <p>Ratti Gali Lake is an alpine glacial lake which is located in Neelum Valley, Azad Kashmir, Pakistan . The lake is located at an altitude of 3,683 metres (12,083 ft).[2] The lake is fed by the surrounding glacier waters of the mountains.</p>
+                        <button class="book-now">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service Item 4 -->
+        <div class="single-service">
+            <div class="image-wrapper">
+                <img src="minimarg.jpg" alt="Minimarg">
+                <div class="overlay">
+                    <div class="price">PKR 12000</div>
+                    <div class="text">
+                        <h3>MINIMARG</h3>
+                        <p>Minimarg (Kashmiri: منٕ مرگ) is a village in the Astore District of Gilgit Baltistan, Pakistan. It is situated on the bank of the Burzil Nala, approximately 36 kilometres (22 mi) south of the Chilam Chowki checkpost and to the north of a border village named Kamri.[2] The village, located south of Astore via the Burzil Pass, has an average elevation of 2,844 metres (9,331 ft) above sea level.</p>
+                        <button class="book-now">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section id="testimonials ">
     <div class="title-text">
         <p>TESTIMONIALS</p>
         <h1>What Clients Says
         </h1>
     </div>
-    <div class="testimonials-row"></div>
-    <div class="testimonials-col">
-        <div class="user">
-            <img src="Farooq.jpg">
-            <div class="user-info">
-                <h4>RAJA FAROOQ HAIDER <i class="fa fa-X"></i></h4>
-                <small>@RJfarooq.pk</small>
+
+
+<section id="testimonial-slideshow">
+    <div class="slideshow-container">
+        <!-- Slide 1 -->
+        <div class="slide active">
+            <img src="child.jpg" alt="Client 1">
+            <div class="comment-text">
+                <h3>John Doe</h3>
+                <p>"Traveling with this agency was a game-changer for me! I’ve always been overwhelmed by planning trips, but they made the entire process effortless. The staff was so kind and patient in answering my endless questions. Each stop on the tour felt like a hidden gem, and I could tell they really put thought into crafting a unique experience. I appreciated the small touches, like a welcome gift at the hotel and a local guide who shared fascinating stories about each destination. I’m already planning my next trip with them!"</p>
             </div>
         </div>
-        <p>Their service are the best in the Pakistan </p>
-    </div>
-    <div class="testimonials-col">
-        <div class="user">
-            <img src="Farooq.jpg">
-            <div class="user-info">
-                <h4>RAJA FAROOQ HAIDER <i class="fa fa-X"></i></h4>
-                <small>@RJfarooq.pk</small>
+        <!-- Slide 2 -->
+        <div class="slide">
+            <img src="OIP.jpg" alt="Client 2">
+            <div class="comment-text">
+                <h3></h3>
+                <p>""I had the most incredible experience with this tour agency! From the moment I contacted them, they were attentive and made me feel valued as a customer. They designed a custom itinerary that suited my preferences perfectly, combining breathtaking scenery with cultural experiences I’ll never forget. The accommodations were fantastic, and every detail was taken care of, from transportation to meals. I highly recommend them to anyone looking for a stress-free and memorable adventure!""</p>
             </div>
         </div>
-        <p>Their service are the best in the Pakistan</p>
-    </div>
-    <div class="testimonials-col">
-        <div class="user">
-            <img src="Farooq.jpg">
-            <div class="user-info">
-                <h4>RAJA FAROOQ HAIDER <i class="fa fa-X"></i></h4>
-                <small>@RJfarooq.pk</small>
+        <!-- Slide 3 -->
+        <div class="slide">
+            <img src="OIP (1).jpg" alt="Client 3">
+            <div class="comment-text">
+                <h3>Jeff Bezos</h3>
+                <p>""I cannot say enough good things about this tour agency. From start to finish, the experience was flawless. The team’s professionalism stood out, as did their passion for travel. The guide was incredibly knowledgeable and went out of their way to ensure everyone in our group had a fantastic time. We explored stunning locations, enjoyed delicious local cuisine, and even got some free time to discover on our own. Every moment was packed with adventure, yet I never felt rushed. This agency made my dream vacation a reality!""</p>
             </div>
         </div>
-        <p>Their service are the best in the Pakistan</p>
     </div>
+    <!-- Navigation Buttons -->
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
 </section>
+
+
+    
+    
 <section id="footer">
-    <div class="title-text">
-        <p>CONTACTS</p>
-        <h1>Visit Office Today </h1>
-    </div>
-    <div class="footer-row">
-        <div class="footer-left"></div>
-        <h1>Opening Hours</h1>
-        <p>MONDAY TO FRIDAY- 10:00AM TO 9:00PM</p>
-        <div class="footer-right">
-            <h1>Get In Touch </h1>
-            <p>Islamabad Sector I-9 Street 14</p>
-            <p>shahzaibpervez54@gmail.com</p>
-            <p>03190875344</p>
+    <div class="footer-container">
+        <!-- About Us Section -->
+        <div class="footer-about">
+            <h3>About Us</h3>
+            <p>Explore the world's most breathtaking destinations with us. We provide custom tour packages for travelers looking for adventure, culture, and unforgettable experiences.</p>
+        </div>
+
+        <!-- Quick Links Section -->
+       
+
+        <!-- Contact Section -->
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Address: Islamabad, Sector I-9, Street 14</p>
+            <p>Email: <a href="mailto:info@touragency.com">info@touragency.com</a></p>
+            <p>Phone: <a href="tel:+923190875344">03190875344</a></p>
+        </div>
+
+        <!-- Newsletter Subscription Section -->
+        <div class="footer-newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form action="#" method="POST">
+                <input type="email" placeholder="Your email address" required>
+                
+            </form>
         </div>
     </div>
+
+    <!-- Social Media Section -->
+    <div class="footer-social">
+        <h3>Follow Us</h3>
+        <ul>
+            <i class="fa-brands fa-facebook"></i> Facebook</a></li>
+            <i class="fa-brands fa-instagram"></i> Instagram</a></li>
+            <i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+            <i class="fa-brands fa-youtube"></i> YouTube</a></li>
+        </ul>
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Tour Agency. All Rights Reserved.</p>
+    </div>
 </section>
+
+
     <!-- JavaScript -->
     <script>
         
